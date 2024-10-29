@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DailyConversor</string>
+    <string name="conversor_de_medidas">Conversor de Medidas</string>
+    <string name="comprimento">Comprimento</string>
+    <string name="insira_o_valor">Insira o valor</string>
+    <string name="resultado">Resultado:</string>
+    <string name="converter">Converter</string>
+    <string name="peso">Peso</string>
+    <string name="rea">Área</string>
+    <string name="volume">Volume</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="velocidade">Velocidade</string>
+    <string name="tempo">Tempo</string>
+</resources>

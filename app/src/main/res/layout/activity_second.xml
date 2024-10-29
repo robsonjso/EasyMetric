@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bc_gradient_first"
+    tools:context=".SecondActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvConverterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conversor_de_medidas"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Card para Comprimento -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLength"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:layout_constraintTop_toBottomOf="@id/tvConverterTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comprimento"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputLengthUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputLengthUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputLength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnConvertLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Peso -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWeight"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardLength"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/peso"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputWeightUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputWeightUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Volume -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVolume"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardWeight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/volume"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputVolumeUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputVolumeUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Área -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardArea"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardVolume"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rea"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputAreaUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputAreaUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Temperatura -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTemperature"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardArea"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temperatura"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputTemperatureUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputTemperatureUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Velocidade -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSpeed"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardTemperature"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/velocidade"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputSpeedUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputSpeedUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para Tempo -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTime"
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toBottomOf="@id/cardSpeed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tempo"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etInputTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/insira_o_valor"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/spinnerInputTimeUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinnerOutputTimeUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvOutputTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnConvertTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/converter" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
